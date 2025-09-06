@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding:0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .login-box{
+            width:500px;
+            height:330px;
+            background-color: rgba(187, 187, 255, 0.33);
+            display: flex;
+            justify-content: center;
+            margin:auto;
+            margin-top: 100px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(0, 139, 139, 0.473);
+        }
+        h1{
+            color:rgba(8, 8, 86, 0.932);
+            text-align: center;
+        }
+        input{
+            width:400px;
+            height:35px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            padding-left:10px;
+            font-size: 16px;
+            border:none;
+        }
+        button{
+            width:300px;
+            height:40px;
+            margin-left:50px;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            color:white;
+            background-color:rgba(108, 108, 233, 0.896);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <form id="myform" onsubmit="return validateform()">
+            <h1>FORM VALIDATION</h1>
+        <input type="text" name="name" id="name" placeholder="Name"><br>
+        <input type="email" name="email" id="email" placeholder="Email"><br>
+        <input type="password" name="password" id="password" placeholder="Password"><br>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<script>
+    function validateform(){
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var pass=document.getElementById('password').value;
+        if(name===""){
+            alert('name is required');
+            return false;
+        }
+        if(email===""){
+            alert('email is required');
+            return false;
+        }
+        if(pass===""){
+            alert('password is required');
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

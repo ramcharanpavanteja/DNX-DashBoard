@@ -1,0 +1,186 @@
+<html>
+<head><title>STUDENT LOGIN</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    .head{
+            width:100%;
+            height:10%;
+            border:1px;
+            background-color:#3399cc;
+            top:0;
+            position:absolute;
+        }
+    .logo{
+            color:white;
+            font-size:24px;
+            font-weight: bold;
+            font-family: Trebuchet Ms;
+            padding:20px;
+        }
+    div ul{
+            display:flex;
+            top:5%;
+            right:1%;
+            position:absolute;
+            padding:20px;
+            list-style: none;
+        }
+    ul li{
+            margin-left: 30px;
+        }
+    ul li a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-family: sans-serif;
+        }
+    .loginbox{
+            position: absolute;
+            padding: 20px;
+            width: 400px;
+            height:325px;
+            top: 25%;
+            right:33%;
+            background:#e9eef2;
+            border-radius: 10px;
+            box-shadow:0px 5px 10px rgba(52, 50, 50, 0.69);
+        }
+    .loginbox .logo{
+            color:white;
+            font-size:24px;
+            font-weight: bold;
+            font-family: Trebuchet Ms;
+        }
+        .loginbox h2{
+            margin-top:15px;
+            padding: ;
+            color:#3399cc;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .loginbox .userbox{
+            position: relative;
+            top:30px;
+            padding-top: 10px;
+        }
+        input{
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #000;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, .5);
+            margin-bottom:20px;
+        }
+        label{
+            position: absolute;
+            top: 5px;
+            left:1px;
+            padding: 10px 0px;
+            color: rgba(0, 0, 0, .5);
+            pointer-events: none;
+            transition: .5s;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        .loginbox .userbox input:focus~label,
+        .loginbox .userbox input:valid~label{
+            top:-20px;
+            left:0;
+            color:#000;
+            font-size:12px ;
+        }
+        .forget_pass{
+            float:left;
+            font-size:12px;
+            color:#5689c0;
+            text-decoration: none;
+        }
+        input.btn
+        {
+            position:absolute;
+            padding: 10px;
+            text-decoration: none;
+            color: #03e9f4;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size:13px;
+            transition: .5s;
+            letter-spacing: 5px;
+            background:#5689c0;
+            border-radius: 3px;
+            width: 50%;
+            bottom:50px;
+            left:25%;
+            cursor:poniter;
+        }
+     div.flex
+        {
+            display: flex;
+            background: #41436a;
+            height: 40px;
+            width:100%;
+            align-items: center;
+            position: absolute;   
+         }
+
+        p{
+            color:blue;
+            text-align:center;
+            font-family: sans-serif;
+        }
+        a{
+            text-decoration:none;
+        }
+
+        div.reg{
+            position:absolute;
+            bottom:35px;
+            left:5%;
+            width:400px;
+        }
+        .reg p{
+            position: relative;
+            font-size: 18px;
+            color: rgba(0, 0, 0, .5);
+        }
+	</style>
+</head>	
+<body>
+	<div class="head">
+        <h2 class="logo">StartupConnect</h2>
+        <ul>
+            <li> <a href="dashboard.html">Home</a></li>
+           <li><a href="#about">About</a></li> 
+
+            </ul>
+    </div>
+<div class="loginbox">
+    <h2>LOGIN</h2>
+  <form action="" method="post" autocomplete="on">
+    <div class="userbox">
+    </div>
+    <div class="userbox">
+    <input type="email" name="email" required>
+      <label> Email</label>
+    </div>
+     <div class="userbox">
+  <input type="password" name="password" required>
+       <label> Password</label>
+     </div>
+<input type="submit" name="login" class="btn" value="login">
+  </form>
+
+<div class="reg">
+   <p>Dont have an account?<a href="startup_register.html">  Sign up</a></p>
+</div>
+  
+</div>
+</body>
+</html>
