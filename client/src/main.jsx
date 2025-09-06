@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, NavLink, useLocation } from "react-router-dom";
 import "./index.css";
-import Header from "./components/header.jsx";
+import Header from "./components/Header.jsx";
 
 
 import Tasks from "./pages/Tasks.jsx";
