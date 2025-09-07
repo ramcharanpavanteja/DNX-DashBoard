@@ -14,7 +14,7 @@ function Layout() {
    const [q, setQ] = useState(""); 
 
   const sectionMap = {
-    "/": "Overview",
+    "/overview": "Overview",
     "/tasks": "Tasks",
     "/mentors": "Mentors",
     "/message": "Messages",
@@ -41,7 +41,7 @@ function Layout() {
           <ul className="flex flex-col gap-y-2">
             <li>
               <NavLink
-                to="/"
+                to="/overview"
                 className={({ isActive }) =>
                   `flex items-center px-4 py-2 rounded-xl transition-colors ${
                     isActive ? "bg-neutral-100 text-black" : "hover:bg-gray-100 text-slate-400"
@@ -132,8 +132,11 @@ function Layout() {
         <div className=" flex-1 overflow-y-auto bg-gray-50">
           <Routes>
             
+              <Route path="/overview"  />
             <Route path="/tasks" element={<Tasks q={q} />} />
             <Route path="/mentors" element={<Mentors q={q} />} />
+            <Route path="/message"  />
+            <Route path="/settings"  />
           </Routes>
         </div>
       </main>
