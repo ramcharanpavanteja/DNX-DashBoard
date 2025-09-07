@@ -8,6 +8,13 @@ import Header from "./components/Header.jsx";
 import Tasks from "./pages/Tasks.jsx";
 import Mentors from "./pages/Mentors.jsx";
 
+import settingsIcon from "./assets/icons/setting.svg";
+import overviewIcon from "./assets/icons/overview.svg";
+import tasksIcon from "./assets/icons/tasks.svg";
+import mentorsIcon from "./assets/icons/mentors.svg";
+import messageIcon from "./assets/icons/message.svg";
+import logoIcon from "./assets/icons/logo.svg";
+
 function Layout() {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -32,7 +39,7 @@ function Layout() {
       >
         {/* Logo */}
         <div className="flex items-center gap-x-3 mb-6">
-          <img src="src/assets/icons/logo.svg" alt="logo" width="40" height="40" />
+          <img src={logoIcon} alt="logo" width="40" height="40" />
           <h1 className="text-2xl md:text-4xl font-semibold text-black">DNX</h1>
         </div>
 
@@ -48,7 +55,7 @@ function Layout() {
                   }`
                 }
               >
-                <img src="src/assets/icons/overview.svg" className="w-5 h-5" />
+                <img src={overviewIcon} className="w-5 h-5" />
                 <span className="ml-2 text-sm md:text-base">Overview</span>
               </NavLink>
             </li>
@@ -61,7 +68,7 @@ function Layout() {
                   }`
                 }
               >
-                <img src="src/assets/icons/tasks.svg" className="w-5 h-5" />
+                <img src={tasksIcon} className="w-5 h-5" />
                 <span className="ml-2 text-sm md:text-base">Tasks</span>
               </NavLink>
             </li>
@@ -74,7 +81,7 @@ function Layout() {
                   }`
                 }
               >
-                <img src="src/assets/icons/mentors.svg" className="w-5 h-5" />
+                <img src={mentorsIcon} className="w-5 h-5" />
                 <span className="ml-2 text-sm md:text-base">Mentors</span>
               </NavLink>
             </li>
@@ -87,7 +94,7 @@ function Layout() {
                   }`
                 }
               >
-                <img src="src/assets/icons/message.svg" className="w-5 h-5" />
+                <img src={messageIcon} className="w-5 h-5" />
                 <span className="ml-2 text-sm md:text-base">Messages</span>
               </NavLink>
             </li>
@@ -100,7 +107,7 @@ function Layout() {
                   }`
                 }
               >
-                <img src="src/assets/icons/setting.svg" className="w-5 h-5" />
+                <img src={settingsIcon} className="w-5 h-5" />
                 <span className="ml-2 text-sm md:text-base">Settings</span>
               </NavLink>
             </li>
