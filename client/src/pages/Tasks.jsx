@@ -3,7 +3,7 @@ import leftArrowIcon from "../assets/icons/arrow-left.svg";
 import rightArrowIcon from "../assets/icons/arrow-right.svg";
 import TaskCard from "../components/TaskCard.jsx";
 
-const API = "https://dnx-dashboard.onrender.com";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8081";
 
 export default function Tasks({ q }) {
   const [tasks, setTasks] = useState([]);
