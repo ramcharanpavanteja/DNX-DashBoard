@@ -1,8 +1,16 @@
 {
-  "name": "dnx-root",
-  "private": true,
-  "scripts": {
-    "build": "cd client && npm install && npm run build",
-    "start": "cd server && npm start"
+  "name": "dnx-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+"scripts": {
+  "start": "node src/index.js",
+  "build": "cd client && npm install && npm run build"
+},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
   }
 }
