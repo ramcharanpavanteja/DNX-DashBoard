@@ -2,9 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
 import tasksRouter from './routes/tasks.js';
 import mentorsRouter from './routes/mentors.js';
 
@@ -25,22 +22,10 @@ app.use(cors({
   }
 }));
 
-// --- API routes ---
-app.get('/api', (req, res) => res.json({ status: 'ok', service: 'dnx-server' }));
+app.get('/', (req, res) => res.json({ status: 'ok', service: 'dnx-server' }));
 app.use('/api/tasks', tasksRouter);
 app.use('/api/mentors', mentorsRouter);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// --- Serve React frontend build ---
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-});
-
-// --- MongoDB connection ---
 const PORT = process.env.PORT || 8080;
 
 mongoose.connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
